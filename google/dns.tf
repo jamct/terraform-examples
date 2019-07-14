@@ -6,7 +6,7 @@ provider "Cloudflare" {
 resource "Cloudflare_record" "test" {
   domain = var.domain
   name = var.subdomain
-  value = "${google_compute_address.serverstatic.address}"
+  value = "${google_compute_address.server-static.address}"
   type = "A"
   ttl = 3600
 }
